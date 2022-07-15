@@ -6,7 +6,6 @@ const getTasks = function (req) {
     } catch (e) {
         return e;
     }
-
 }
 
 const getTaskById = function (req) {
@@ -15,7 +14,6 @@ const getTaskById = function (req) {
     } catch (e) {
         return e;
     }
-
 }
 
 const saveTask = function (req) {
@@ -38,7 +36,7 @@ const updateTask = function (req) {
 const deleteTask = function (req) {
     try {
         return Tasks.findByIdAndDelete(req.params.id);
-    } catch(e) {
+    } catch (e) {
         return e;
     }
 }

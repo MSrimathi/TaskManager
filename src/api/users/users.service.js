@@ -6,7 +6,6 @@ const getUsers = function (req) {
     } catch (e) {
         return e;
     }
-
 }
 
 const getUserById = function (req) {
@@ -15,7 +14,6 @@ const getUserById = function (req) {
     } catch (e) {
         return e;
     }
-
 }
 
 const saveUser = function (req) {
@@ -38,7 +36,7 @@ const updateUser = function (req) {
 const deleteUser = function (req) {
     try {
         return Users.findByIdAndDelete(req.params.id);
-    } catch(e) {
+    } catch (e) {
         return e;
     }
 }
