@@ -1,48 +1,54 @@
 <html>
-    <head>
-        <title>Users</title>
-        <link rel="stylesheet" href="css/users.css">
-        <script src="js/jquery-3.6.0.js"></script>
-        <script src="js/users.js"></script>
-    </head>
-    <body>
-        <h1>Users</h1>
-        <a href="/users">Users</a>
-        <a href="/tasks">Tasks</a>
-        <br>
-        <br>
-        <div id="btnDiv">
-            <button id="addBtn">Add</button>
-            <button id="edBtn">Edit</button>
-            <button id="delBtn">Delete</button>
-        </div>
-        <br>
-        <br>
-        <table id="users">
-            <thead>
-                <tr>
+
+<head>
+    <title>Users</title>
+    <link rel="stylesheet" href="css/users.css">
+    <script src="js/jquery-3.6.0.js"></script>
+    <script src="js/users.js"></script>
+</head>
+
+<body>
+    <h1>{{title}}</h1>
+    {{!-- {{#if author}}
+        <p>{{name}}</p>
+        <p>{{stdObj.name}} {{stdObj.age}}</p>
+        <p>{{nameArr}}</p>
+    {{/if}}
+    <ul>
+        {{#each nameArr}}
+            <li>{{this}}</li>
+        {{/each}}
+    </ul> --}}
+
+    <a href="/users">Users</a>
+    <a href="/tasks">Tasks</a>
+    <br>
+    <br>
+    <div id="btnDiv">
+        <button id="addBtn">Add</button>
+        <button id="edBtn">Edit</button>
+        <button id="delBtn">Delete</button>
+    </div>
+    <br>
+    <br>
+    <table id="users">
+        <thead>
+            <tr>
                 <th></th>
                 <th>Name</th>
                 <th>Mail id</th>
-                </tr>
-            </thead>
-            <tbody>
+            </tr>
+        </thead>
+        <tbody>
+            {{#each user}}
                 <tr>
                     <td><input type="checkbox"></td>
-                    <td>Sri</td>
-                    <td>sri@gmail.com</td>
+                    <td>{{this.name}}</td>
+                    <td>{{this.email}}</td>
                 </tr>
-                <tr>
-                    <td><input type="checkbox"></td>
-                    <td>Abi</td>
-                    <td>abisubu@gmail.com</td>
-                </tr>
-                <tr>
-                    <td><input type="checkbox"></td>
-                    <td>Ragavi</td>
-                    <td>ragavi@gmail.com</td>
-                </tr>
-            </tbody>
-        </table>
-    </body>
+            {{/each}}
+        </tbody>
+    </table>
+</body>
+
 </html>

@@ -12,7 +12,7 @@ const TasksSchema = new mongoose.Schema({
         enum: ['complete', 'incomplete'],
         default: 'incomplete'
     },
-    owner_Id: {
+    owner_id: {
         type: mongoose.Schema.Types.ObjectId,
         required: true,
         ref: "Users"
